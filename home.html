@@ -15,10 +15,12 @@
         dias ao seu lado são especiais. Te amo pra sempre! 💗
       </p>
 
+      <button onclick="tocarMusica()" class="btn-musica">Clique para ouvir nossa música 💖</button>
+
       <div class="contador">
         <h2>Estamos juntos há:</h2>
         <div id="tempo"></div>
-        <p>Desde Janeiro de 2015</p>
+        <p>Desde 7 de Setembro de 2014</p>
       </div>
 
     <div class="carrossel">
@@ -44,14 +46,14 @@ Te amo ontem, hoje e para sempre. Feliz Dia dos Namorados! 💕</p>
 
 
 <div class="musica">
-  <audio controls autoplay loop>
+  <audio id="musica" controls autoplay loop>
     <source src="music/Presente De Deus (Apple Music Home Session).mp3" type="audio/mpeg">
     Seu navegador não suporta o elemento de áudio.
   </audio>
 </div>
 
 <script>
-  const inicio = new Date("2015-01-01T00:00:00");
+  const inicio = new Date("2014-09-07T00:00:00");
   const tempoEl = document.getElementById("tempo");
 
   function atualizarContador() {
@@ -66,6 +68,10 @@ Te amo ontem, hoje e para sempre. Feliz Dia dos Namorados! 💕</p>
     const segundos = agora.getSeconds();
 
     tempoEl.innerHTML = `${anos} anos, ${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`;
+  }
+
+  function tocarMusica() {
+    document.getElementById("musica").play();
   }
 
   setInterval(atualizarContador, 1000);

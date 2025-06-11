@@ -121,3 +121,15 @@ p{
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
 }
+
+.btn-musica {
+  padding: 12px 20px;
+  font-size: 18px;
+  border: none;
+  background-color: #472033;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;;
+}

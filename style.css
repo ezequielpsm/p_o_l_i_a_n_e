@@ -1,0 +1,118 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: #1a1a1a;
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #2a2a2a;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 0, 150, 0.4);
+}
+
+h1 {
+  color: #ff4da6;
+  font-size: 2rem;
+}
+
+.mensagem {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.contador {
+  background: #333;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.foto-musica {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.foto {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+}
+
+.musica audio,
+.musica iframe {
+  max-width: 100%;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.carrossel {
+  position: relative;
+  max-width: 100%;
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.carrossel img {
+  max-width: 90%;
+  max-height: 300px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 0, 150, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.carrossel button {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #ff4da6;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.carrossel button:hover {
+  transform: scale(1.2);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .mensagem {
+    font-size: 16px;
+  }
+
+  .carrossel {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .carrossel button {
+    font-size: 1.5rem;
+  }
+
+  .contador {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  #tempo {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Para Meu Amor 💖</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Te Amo, Poliane Chaves 💕</h1>
+      <p class="mensagem">
+        Amor, quero que você saiba o quanto você é importante pra mim. Todos os
+        dias ao seu lado são especiais. Te amo pra sempre! 💗
+      </p>
+
+      <div class="contador">
+        <h2>Estamos juntos há:</h2>
+        <div id="tempo"></div>
+        <p>Desde Janeiro de 2015</p>
+      </div>
+
+    <div class="carrossel">
+  <button class="anterior" onclick="mudarFoto(-1)">❮</button>
+  <img id="foto-carrossel" src="img1.jpg" alt="Foto nossa" />
+  <button class="proximo" onclick="mudarFoto(1)">❯</button>
+</div>
+
+
+<div class="musica">
+  <audio controls autoplay loop>
+    <source src="music/Presente De Deus (Apple Music Home Session).mp3" type="audio/mpeg">
+    Seu navegador não suporta o elemento de áudio.
+  </audio>
+</div>
+
+<script>
+  const inicio = new Date("2015-01-01T00:00:00");
+  const tempoEl = document.getElementById("tempo");
+
+  function atualizarContador() {
+    const agora = new Date();
+    const diff = agora - inicio;
+
+    const anos = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+    const meses = Math.floor(diff / (1000 * 60 * 60 * 24 * 30)) % 12;
+    const dias = Math.floor(diff / (1000 * 60 * 60 * 24)) % 30;
+    const horas = agora.getHours();
+    const minutos = agora.getMinutes();
+    const segundos = agora.getSeconds();
+
+    tempoEl.innerHTML = `${anos} anos, ${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`;
+  }
+
+  setInterval(atualizarContador, 1000);
+  atualizarContador();
+
+  const fotos = [
+  "fotos/img1.jpg", "fotos/img2.jpg", "fotos/img3.jpg", "fotos/img4.jpg",
+  "fotos/img5.jpg", "fotos/img6.jpg", "fotos/img7.jpg", "fotos/img8.jpg",
+  "fotos/img9.jpg", "fotos/img10.jpg", "fotos/img11.jpg", "fotos/img12.jpg",
+  "fotos/img13.jpg", "fotos/img14.jpg", "fotos/img15.jpg"
+];
+  let indice = 0;
+
+  function mudarFoto(direcao) {
+    indice = (indice + direcao + fotos.length) % fotos.length;
+    document.getElementById("foto-carrossel").src = fotos[indice];
+  }
+
+  // Carrossel automático a cada 3 segundos
+  setInterval(() => mudarFoto(1), 3000);
+</script>
+  </body>
+</html>

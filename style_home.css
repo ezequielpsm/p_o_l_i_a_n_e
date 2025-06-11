@@ -116,3 +116,8 @@ h1 {
     font-size: 14px;
   }
 }
+
+p{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+}

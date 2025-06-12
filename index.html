@@ -14,6 +14,13 @@
     </div>
 
     <script>
+
+      const senha = prompt("Digite a senha: ");
+      if (senha !== "poize"){
+        document.write("Acesso negado");
+        throw new Error ("Acesso negado")
+      }
+
       function irParaPresente() {
         // Redireciona para a tela principal (certifique-se que home.html está na mesma pasta)
         window.location.href = "home.html";
